@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/relLayout1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/relLayout2">
+        <include layout="@layout/layout_viewpager"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/relLayout2" android:background="@drawable/border_top" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentBottom="true">
+        <com.google.android.material.tabs.TabLayout android:id="@+id/tabsShare" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </RelativeLayout>
+</RelativeLayout>

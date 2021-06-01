@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="22sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/txtSignOut" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="120dp" android:text="Are you sure you want to sign out?" android:layout_centerHorizontal="true"/>
+    <Button android:id="@+id/signOutButton" android:background="@drawable/white_rounded_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="Sign Out" android:layout_below="@+id/txtSignOut" android:layout_centerHorizontal="true"/>
+    <ProgressBar android:id="@+id/signOutProgressBar" android:layout_width="120dp" android:layout_height="120dp" android:layout_marginTop="50dp" android:layout_below="@+id/signOutButton" android:layout_centerHorizontal="true"/>
+    <TextView android:textSize="16sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/wait" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Signing Out.." android:layout_below="@+id/signOutProgressBar"/> \\ 
+</RelativeLayout>

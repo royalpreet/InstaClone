@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/relLayout1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/edit_profile_toolbar"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/relLayout2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_below="@+id/relLayout1">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/changeImage" android:layout_width="120dp" android:layout_height="120dp" android:layout_centerHorizontal="true" app:civ_border_color="@color/black" app:civ_border_width="1dp"/>
+        <TextView android:textSize="17sp" android:textColor="@color/blue" android:id="@+id/textChangeImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Change Photo" android:layout_below="@+id/changeImage" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/relLayout3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_below="@+id/relLayout2">
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:background="@drawable/border_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_username"
+                android:layout_centerVertical="true"/>
+            <EditText
+                android:textSize="24sp"
+                android:id="@+id/changeUsername"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="textNoSuggestions"
+                android:layout_marginStart="30dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/layout2" android:background="@drawable/border_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_below="@+id/layout1" android:layout_marginStart="10dp" android:layout_marginEnd="11dp">
+            <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_display_name" android:layout_centerVertical="true"/>
+            <EditText android:textSize="24sp" android:id="@+id/changeDisplayName" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Display name" android:inputType="textNoSuggestions" android:layout_marginStart="30dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/layout3" android:background="@drawable/border_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_below="@+id/layout2" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+            <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_description" android:layout_centerVertical="true"/>
+
+            <EditText
+                android:id="@+id/changeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:background="@null"
+                android:hint="Description"
+                android:inputType="textNoSuggestions"
+                android:textSize="24sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="25sp" android:textColor="@color/black" android:id="@+id/privateInfo" android:background="@drawable/border_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="PRIVATE INFORMATION" android:layout_below="@+id/relLayout3" android:layout_centerHorizontal="true"/>
+    <RelativeLayout android:id="@+id/relLayout4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_below="@+id/privateInfo">
+        <RelativeLayout android:id="@+id/layout4" android:background="@drawable/border_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+            <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_email" android:layout_centerVertical="true"/>
+            <EditText android:textSize="24sp" android:id="@+id/changeEmail" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Email" android:inputType="textNoSuggestions" android:layout_marginStart="30dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/layout5" android:background="@drawable/border_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:layout_below="@+id/layout4" android:layout_marginStart="10dp" android:layout_marginEnd="11dp">
+            <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ic_phone" android:layout_centerVertical="true"/>
+            <EditText android:textSize="24sp" android:id="@+id/changePhone" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Phone Number" android:inputType="textNoSuggestions" android:layout_marginStart="30dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar android:id="@+id/editProfileProgressBar" android:layout_width="120dp" android:layout_height="120dp" android:layout_centerInParent="true"/>
+</RelativeLayout>

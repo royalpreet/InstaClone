@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/relLayout1"
+        android:background="@drawable/border_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText android:textSize="20sp"
+            android:textColor="@color/black"
+            android:id="@+id/searchText"
+            android:background="@null"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search a user..."
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="55dp"/>
+        <ImageView android:id="@+id/searchImage" android:layout_width="35dp" android:layout_height="35dp" android:src="@drawable/ic_search" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:layout_marginStart="6dp" android:layout_marginEnd="15dp" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/relLayout2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/relLayout1">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/profilePhoto" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="12dp" android:layout_centerVertical="true" android:layout_marginStart="15dp"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/profilePhoto">
+            <TextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:textSize="16sp" android:id="@+id/display_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/username"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView android:id="@+id/bottom_navigation" android:background="@drawable/border_top" android:layout_width="match_parent" android:layout_height="50dp" android:layout_alignParentBottom="true" app:menu="@menu/bottom_navigation_menu"/>
+</RelativeLayout>

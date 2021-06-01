@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/relLayout1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/snippet_toolbar_gallery"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/relLayout4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/relLayout1">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="100">
+            <RelativeLayout android:id="@+id/relLayout2" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="60">
+                <ImageView android:id="@+id/galleryImage" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <ProgressBar android:id="@+id/galleryProgressBar" android:layout_width="100dp" android:layout_height="100dp" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/relLayout3" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="40">
+                <GridView android:gravity="center" android:id="@+id/gridViewGallery" android:layout_width="match_parent" android:layout_height="match_parent" android:horizontalSpacing="1dp" android:verticalSpacing="1dp" android:stretchMode="none" android:numColumns="4"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
